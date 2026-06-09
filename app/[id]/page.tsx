@@ -13,7 +13,7 @@ export default async function Page({
                 confirm: false,
                 id: 999,
                 lastname: "Invitado",
-                name: "Pimero",
+                name: "Pimer",
                 room: 3,
                 slug: "demo",
                 state: "test",
@@ -34,6 +34,7 @@ export default async function Page({
         name: "demo",
         payment_coverage: 1,
         sleep: true,
+        slug: "demo"
     }
 
     if (!data) {

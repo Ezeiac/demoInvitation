@@ -41,7 +41,7 @@ export const VisitCalina = ({
                             className='logoCalina h-fit'
                         />
                     </div>
-                    <div className='bg-white w-[clamp(50vw,90vw,800px)] ratio-4/3 p-2 mt-5 relative]'>
+                    <div className='bg-white w-[clamp(300px,90vw,600px)] ratio-4/3 p-2 mt-5 relative]'>
                         <VideoSection
                             id="videoCalina"
                             progressRef={progressRef}

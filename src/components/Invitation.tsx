@@ -31,7 +31,7 @@ export const Invitation = ({
 }: dataInv) => {
     const mainRef = useRef<HTMLDivElement>(null);
     const presentation = useRef<HTMLDivElement>(null);
-    const leoSection = useRef<HTMLDivElement>(null);
+    const LucasSection = useRef<HTMLDivElement>(null);
     const yaniSection = useRef<HTMLDivElement>(null);
     const finalSection = useRef<HTMLDivElement>(null);
     const scrollRef = useRef<HTMLDivElement>(null)
@@ -68,7 +68,7 @@ export const Invitation = ({
     } = useInvitationAnimations({
         mainRef,
         presentation,
-        leoSection,
+        LucasSection,
         yaniSection,
         finalSection,
         v1Progress,
@@ -124,9 +124,9 @@ export const Invitation = ({
                 <HeroSection id="heroSection" />
             </div>
 
-            <div className="w-full h-[200lvh] relative" id="leoContainer">
+            <div className="w-full h-[200lvh] relative" id="LucasContainer">
 
-                <div ref={leoSection} className="w-full lg:w-auto h-lvh">
+                <div ref={LucasSection} className="w-full lg:w-auto h-lvh">
                     <Intro />
                     <VideoSection
                         id="videoLucas"

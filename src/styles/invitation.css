@@ -210,7 +210,7 @@ a {
 
 .logo {
     width: 20%;
-    max-width: 150px;
+    max-width: 100px;
     aspect-ratio: 90/235;
     z-index: 999;
     -webkit-mask-image: url("../assets/images/logo2.svg");

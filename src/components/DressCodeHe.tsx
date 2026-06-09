@@ -132,13 +132,13 @@ export const DressCodeHe = ({
     }
 
     return (
-        <div id="dresscodeHe" className='content-center w-full'>
-            <div id="selectorHe" className="absolute w-[50vw] right-[32px] top-1/4 border z-50 bg-[#00000090] opacity-0 invisible">
+        <div id="dresscodeHe" className='content-center w-full align-self-center '>
+            <div id="selectorHe" className="absolute w-1/2 lg:w-1/5 right-[32px] lg:right-1/4 top-1/4 border z-60 bg-[#00000090] opacity-0 invisible">
                 <div className="text-center dressSelector px-1 py-2">
-                    <h3 className="font-bold font-(family-name:--fontBold) text-(length:--h4size)">Formal sport</h3>
+                    <h3 className="font-bold font-(family-name:--fontBold) text-(length:--h5size)">Formal sport</h3>
                 </div>
-                <div className="flex justify-between px-1 py-[2px] bg-[#111117]">
-                    <h4 className="text-[#79b0cc] font-(family-name:--fontSemiBold) text-(length:--h5size)">Sugerencias</h4>
+                <div className="flex justify-between px-1 py-[2px]">
+                    <h4 className="text-[#79b0cc] font-(family-name:--fontSemiBold) text-(length:--psize)">Sugerencias</h4>
                 </div>
                 <div>
                     {modelArrayM.map((category, i) => {
@@ -152,15 +152,15 @@ export const DressCodeHe = ({
                                     onClick={() => setSectionM(prev => prev === categoryName ? null : categoryName)}
                                     className="flex justify-between w-full px-1 text-white"
                                 >
-                                    <h3 className="font-bold font-(family-name:--fontSemiBold) text-(length:--h4size) text-white">{categoryName}</h3>
+                                    <h3 className="font-bold font-(family-name:--fontSemiBold) text-(length:--psize) text-white">{categoryName}</h3>
                                     <div className="relative w-[4vw] self-center">
-                                        <span className="block">
+                                        <span className="block w-[4vw] max-w-6">
                                             <Image
                                                 src={minus}
                                                 alt=""
                                             />
                                         </span>
-                                        <span className={`absolute top-0 left-0 w-[4vw] lg:w-auto minus ${sectionM === categoryName && "active"}`}>
+                                        <span className={`absolute top-0 left-0 w-[4vw] max-w-6 lg:w-auto minus ${sectionM === categoryName && "active"}`}>
                                             <Image
                                                 src={minus}
                                                 alt=""
@@ -171,7 +171,7 @@ export const DressCodeHe = ({
                                 <div id={categoryName} className="h-0 overflow-hidden text-white">
                                     {options.map((option) => (
                                         <button
-                                            className="w-full text-left my-[2px] font-(family-name:--fontNormal) text-(length:--h5size) px-2 text-white"
+                                            className="w-full text-left my-[2px] font-(family-name:--fontNormal) text-(length:--psize) px-2 text-white"
                                             onClick={() => changeClothesM(categoryName, option.img)}
                                             key={option.name}
                                         >
@@ -186,9 +186,9 @@ export const DressCodeHe = ({
                 </div>
             </div>
 
-            <div id="showcase" className="w-[50vw] h-full"
+            <div id="showcase" className="w-full h-full lg:h-auto flex justify-start"
             >
-                <div id="maniquiHe" className="h-full w-full relative content-center"
+                <div id="maniquiHe" className="h-full w-full lg:w-1/2 relative content-center max-w-500 lg:h-1/2"
                     onClick={() => widthOpposite("He", "She")}
                 >
                     <Image

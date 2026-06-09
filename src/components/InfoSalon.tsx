@@ -5,8 +5,6 @@ import ingresoCalina from '../assets/images/salon/calina.webp'
 import arrowLeft from '../assets/images/salon/arrowLeft.webp'
 import { useEffect, useState } from 'react';
 import { ArrayElements, guestsObj } from '@/app/page'
-import { AnswerComponent } from './AnswerComponent';
-import { sendChanges } from '../helpers/sendAnswer';
 
 interface InfoProps {
     data: ArrayElements
@@ -115,25 +113,8 @@ export const InfoSalon = ({
                                 <br />
                                 Cualquier consulta, no dudes en escribirnos.
                             </p>
-                            <div className='text-white text-[length:var(--h5size)] leading-[1.2] overflow-auto h-full pe-1 border-y border-[#3a3a3a] mb-4'>
-                                {
-                                    guests?.map(g => {
-                                        return (
-                                            <div key={g.id} className='flex justify-between mx-1 my-3'>
-                                                <p className='self-center'>{g.name} {g.lastname}</p>
-                                                <AnswerComponent
-                                                    id={g.id}
-                                                    setDataGuest={setGuests}
-                                                    confirm={g.transfer}
-                                                    status={"transfer"}
-                                                />
-                                            </div>
-                                        )
-                                    })
-                                }
-                            </div>
                             <button
-                                className="w-full py-3 bg-[#960696] text-white font-bold rounded-lg uppercase hover:bg-gray-200 transition-colors"
+                                className="w-full py-3 bg-[#960696] text-white font-bold rounded-lg uppercase hover:bg-[#570457] transition-colors"
                                 onClick={() => {
                                     setConfirmated(prev => !prev)
                                     setTimeout(() => {

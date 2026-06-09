@@ -123,13 +123,13 @@ export const Itinerary = ({
                         <Image
                             src={e.image}
                             alt=""
-                            className="imageBg h-[8lvh] lg:h-[140px] w-auto self-center"
+                            className="imageBg h-[8lvh] lg:h-[100px] w-auto self-center"
                             style={{
                                 backgroundImage: `radial-gradient(at 100% 0%,rgba(0, 0, 0, 0) 0vh, rgba(255, 255, 255, 0.1) var(--mask-size))`
                             }}
                         />
-                        <div className="ms-4 content-center">
-                            <p className="text-[30px] text-white">
+                        <div className="ms-4 lg:ms-0 content-center">
+                            <p className="text-[30px] text-white md:text-center">
                                 {e.horario}
                             </p>
                             <p className="lg:hidden text-white">{e.text}</p>

@@ -69,7 +69,7 @@ export const Gifts = ({
                 id='gifts'
                 className="h-[100hv] z-10 flex flex-col items-center justify-center overflow-hidden"
             >
-                <div id='giftsText' className='flex flex-col h-[110lvh] justify-center mx-4'>
+                <div id='giftsText' className='flex flex-col h-[110lvh] lg:max-w-[80%] justify-center mx-4'>
                     <div id='giftsTextInner'>
                         <h2 className='text-(length:--h1size)'>Regalos</h2>
                         <p className='w-full mt-6 text-(length:--h3size)'>
@@ -85,7 +85,7 @@ export const Gifts = ({
                 id='gifts'
                 className="h-[100hv] z-10 flex flex-col items-center justify-center overflow-hidden"
             >
-                <div id='giftsText' className='flex flex-col h-[110lvh] justify-center mx-4'>
+                <div id='giftsText' className='flex flex-col h-[110lvh] lg:max-w-[80%] justify-center mx-4'>
                     <div id='giftsTextInner'>
                         <h2 className='text-(length:--h1size)'>Tarjetas</h2>
                         <p className='w-full mt-6 text-(length:--h3size)'>
@@ -101,7 +101,7 @@ export const Gifts = ({
                 id='gifts'
                 className="h-[100hv] z-10 flex flex-col items-center justify-center overflow-hidden"
             >
-                <div id='giftsText' className='flex flex-col h-[110lvh] justify-center mx-4'>
+                <div id='giftsText' className='flex flex-col h-[110lvh] lg:max-w-[80%] justify-center mx-4'>
                     <div id='giftsTextInner'>
                         <h2 className='text-(length:--h1size)'>Tarjetas</h2>
                         <p className='w-full mt-6 text-(length:--h3size)'>

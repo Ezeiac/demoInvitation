@@ -82,7 +82,7 @@ export default function Home({
 
   if (!data) {
     return (
-      <div className='flex justify-items-center content-center items-center bg-[#111117]'>
+      <div className='flex justify-center items-center bg-[#111117] h-dvh'>
         <div className='logo'></div>
       </div>
     )

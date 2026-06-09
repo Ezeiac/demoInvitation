@@ -6,12 +6,12 @@
   --foreground: #171717;
   --ycolor: #FF01AA;
   --lcolor: #000DFF;
-  --h1size: clamp(5lvh, 7vw, 80px);
-  --h2size: clamp(3.8lvh, 5.5vw, 60px);
-  --h3size: clamp(3.2lvh, 4.5vw, 40px);
-  --h4size: clamp(2.8lvh, 4vw, 32px);
+  --h1size: clamp(5lvh, 7vw, 48px);
+  --h2size: clamp(3.8lvh, 5.5vw, 40px);
+  --h3size: clamp(3.2lvh, 4.5vw, 32px);
+  --h4size: clamp(2.8lvh, 4vw, 28px);
   --h5size: clamp(2lvh, 3vw, 24px);
-  --menusize: clamp(20px, 5vw, 32px);
+  --menusize: clamp(20px, 6vw, 24px);
   --psize: 16px;
   --wsizeM: min(19vw);
   --wsizeL: min(22vw);

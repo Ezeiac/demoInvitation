@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 interface HookProps {
     mainRef: React.RefObject<HTMLDivElement | null>
     presentation: React.RefObject<HTMLDivElement | null>
-    leoSection: React.RefObject<HTMLDivElement | null>
+    LucasSection: React.RefObject<HTMLDivElement | null>
     yaniSection: React.RefObject<HTMLDivElement | null>
     finalSection: React.RefObject<HTMLDivElement | null>
     v1Progress: React.MutableRefObject<{ t: number }>
@@ -17,7 +17,7 @@ interface HookProps {
 export const useInvitationAnimations = ({
     mainRef,
     presentation,
-    leoSection,
+    LucasSection,
     yaniSection,
     finalSection,
     v1Progress,
@@ -69,8 +69,8 @@ export const useInvitationAnimations = ({
                 .to('#imgTextHero', { opacity: 0, duration: 0.4 }, "heroAnimation")
                 .to('#heroComplete', { opacity: 0, duration: 0.4 }, "heroAnimation+=0.3")
                 .to('#heroMask', {
-                    maskSize: "min(60vw, 700px)",
-                    webkitMaskSize: "min(60vw, 700px)",
+                    maskSize: "min(60vw, 300px)",
+                    webkitMaskSize: "min(60vw, 300px)",
                     duration: 0.7
                 }, "heroAnimation")
 
@@ -108,25 +108,25 @@ export const useInvitationAnimations = ({
                 }, "+=0.2");
 
 
-            const leoTl = gsap.timeline({
+            const LucasTl = gsap.timeline({
                 scrollTrigger: {
-                    trigger: "#leoContainer",
+                    trigger: "#LucasContainer",
                     start: 'top top',
                     end: '+=180%',
                     scrub: 0.5,
-                    pin: leoSection.current,
+                    pin: LucasSection.current,
                     pinSpacing: false,
                     anticipatePin: 1,
                 }
             });
 
-            leoTl.set('#containerTextOrg', { backdropFilter: "blur(15px)" });
-            leoTl.set("#videoLucas canvas", {
+            LucasTl.set('#containerTextOrg', { backdropFilter: "blur(15px)" });
+            LucasTl.set("#videoLucas canvas", {
                 WebkitMaskImage: "radial-gradient(circle at 105vw 50vh, rgb(0, 0, 0) 100vw, rgb(0, 0, 0) 150vw)",
                 maskImage: "radial-gradient(circle at 105vw 50vh, rgb(0, 0, 0) 100vw, rgb(0, 0, 0) 150vw)",
             })
 
-            leoTl
+            LucasTl
                 .fromTo('#containerTextOrg',
                     {
                         webkitMaskImage: 'radial-gradient(circle at bottom center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 40%)',
