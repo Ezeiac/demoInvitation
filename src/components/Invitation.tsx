@@ -15,22 +15,18 @@ import { FooterConfirm } from './FooterConfirm'
 import { InfoSalon } from './InfoSalon'
 import { MenuComponent } from './MenuComponent'
 
-import { ArrayElements, userCommentsType, dataInv, ObjText } from '@/app/page'
+import { ArrayElements, dataInv, ObjText } from '@/app/page'
 
 import { DressCode } from './DressCode';
-import { Carousel } from './Carousel';
-import { Itinerary } from './Itinerary';
 import { Gifts } from './Gifts';
 
 export interface VideoProps {
     id: string;
     data: ArrayElements;
-    commentsData?: userCommentsType[];
 }
 
 export const Invitation = ({
     data,
-    commentsData,
     isDesktop
 }: dataInv) => {
     const mainRef = useRef<HTMLDivElement>(null);
@@ -98,15 +94,6 @@ export const Invitation = ({
         }
     }
 
-    const handleComments = () => {
-        if (infoSalonAnimation.current) {
-            infoSalonAnimation.current.reversed(true);
-
-            document.body.style.overflow = '';
-            window.dispatchEvent(new CustomEvent('unlock-scroll'));
-        }
-    }
-
     useEffect(() => {
         if (!menuCrossAnimation.current) return
 
@@ -122,7 +109,10 @@ export const Invitation = ({
 
     return (
         <div ref={mainRef} className='bg-[#111117]'>
-            <button className='fixed top-5 right-5 w-12 h-12 z-70 rounded-full' onClick={() => setOpenMenu(prev => !prev)}>
+            <button className='fixed top-5 right-5 w-12 h-12 z-70 rounded-full' onClick={(e) => {
+                e.stopPropagation()
+                setOpenMenu(prev => !prev)
+            }}>
                 <div className='w-6 h-3 justify-self-center relative'>
                     <span id='panSup1' className='absolute bg-white w-3 h-1 block top-[6px] -translate-y-2 origin-center left-0'></span>
                     <span id='panSub1' className='absolute bg-white w-3 h-1 block bottom-[6px] translate-y-2 origin-center left-0'></span>
@@ -139,9 +129,9 @@ export const Invitation = ({
                 <div ref={leoSection} className="w-full lg:w-auto h-lvh">
                     <Intro />
                     <VideoSection
-                        id="videoLeo"
+                        id="videoLucas"
                         progressRef={v1Progress}
-                        videoUrl={`/videos/${isDesktop ? "desktop" : "mobile"}/videoLeo.mp4`}
+                        videoUrl={`/videos/${isDesktop ? "desktop" : "mobile"}/videoLucas.mp4`}
                         duration={2}
                         mode="full"
                         align="right"
@@ -149,7 +139,7 @@ export const Invitation = ({
                 </div>
 
                 <div className="absolute bottom-0 left-0 w-full h-lvh z-20 flex items-center justify-center lg:justify-start lg:max-w-1/2 pointer-events-none">
-                    <TextLayer id="Leo" data={data} />
+                    <TextLayer id="Lucas" data={data} />
                 </div>
             </div>
 
@@ -157,9 +147,9 @@ export const Invitation = ({
 
                 <div ref={yaniSection} className="w-full h-lvh">
                     <VideoSection
-                        id="videoYani"
+                        id="videoYami"
                         progressRef={v2Progress}
-                        videoUrl={`/videos/${isDesktop ? "desktop" : "mobile"}/videoYani.mp4`}
+                        videoUrl={`/videos/${isDesktop ? "desktop" : "mobile"}/videoYami.mp4`}
                         duration={2}
                         mode="full"
                         align="left"
@@ -167,7 +157,7 @@ export const Invitation = ({
                 </div>
 
                 <div className="absolute bottom-0 left-0 w-full h-lvh lg:top-1/5 lg:h-full lg:left-1/2 z-20 flex items-center justify-center lg:justify-start lg:max-w-1/2 pointer-events-none">
-                    <TextLayer id="Yani" data={data} />
+                    <TextLayer id="Yami" data={data} />
                 </div>
             </div>
 
@@ -232,11 +222,6 @@ export const Invitation = ({
                 data={data}
                 setOpenMenu={setOpenMenu}
             />
-
-            {/* <Carousel
-                data={data}
-                commentsData={commentsData}
-            /> */}
 
         </div >
     );

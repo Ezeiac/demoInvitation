@@ -32,11 +32,11 @@ export const Price = ({
                         <div id='textFinalInner'>
                             {discount < 1 ? (
                                 <h3 className='uppercase text-center font-bold text-base/7'>
-                                    Pre compra hasta el 9 de noviembre de 2026
+                                    Pre compra hasta el 1 de enero de 2002
                                 </h3>
                             ) : (
                                 <h3 className='uppercase text-center font-bold text-base/7'>
-                                    Confirmar antes del 9 de noviembre de 2026
+                                    Confirmar antes del 1 de enero de 2002
                                 </h3>
                             )}
                         </div>

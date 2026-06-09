@@ -1,4 +1,3 @@
-import { createServerSupabaseClient } from "@/app/lib/supabase/server"
 import Home from "../page"
 
 export default async function Page({
@@ -7,27 +6,39 @@ export default async function Page({
     params: Promise<{ id: string }>
 }) {
 
-    const { id } = await params
+    const data = {
+        church: true,
+        guests: [
+            {
+                confirm: false,
+                id: 999,
+                lastname: "Invitado",
+                name: "Pimero",
+                room: 3,
+                slug: "demo",
+                state: "test",
+                transfer: false
+            },
+            {
+                confirm: false,
+                id: 998,
+                lastname: "Invitado",
+                name: "Segundo",
+                room: 3,
+                slug: "demo",
+                state: "test",
+                transfer: false
+            },
+        ],
+        id: 999,
+        name: "demo",
+        payment_coverage: 1,
+        sleep: true,
+    }
 
-    const supabase = createServerSupabaseClient()
-
-    const { data, error } = await supabase
-        .from("slug")
-        .select(`*,
-            guests(*),
-            comments(*)
-            `)
-        .eq("name", id)
-
-    const { data: commentsData, error: commentsError } = await supabase
-        .from("comments")
-        .select("*")
-        .eq("public", true)
-        .eq("approbed", true)
-
-    if (error || !data?.length || !commentsData?.length) {
+    if (!data) {
         return <div>Grupo no encontrado</div>
     }
 
-    return <Home data={data[0]} commentsData={commentsData} />
+    return <Home data={data} />
 }

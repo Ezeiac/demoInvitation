@@ -37,19 +37,19 @@ export const Itinerary = ({
         {
             id: "martini",
             image: martini,
-            text: "Salón Rincón Calina",
+            text: "Recepción",
             horario: "20hs"
         },
         {
             id: "ring",
             image: ring,
-            text: "Salón Rincón Calina",
+            text: "Civil",
             horario: "20:30hs"
         },
         {
             id: "music",
             image: music,
-            text: "Salón Rincón Calina",
+            text: "Fiesta",
             horario: "21hs"
         }
     ];

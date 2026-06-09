@@ -18,8 +18,8 @@ export const MenuComponent = ({
     const [windowWidth, setWindowWidth] = useState<boolean>(false)
     const [discount, setDiscount] = useState<Number>()
 
-    const urlMaps = "https://maps.app.goo.gl/UudM3Bi5m6jQk3nW8"
-    const urlChurch = "https://maps.app.goo.gl/UudM3Bi5m6jQk3nW8"
+    const urlMaps = "#"
+    const urlChurch = "#"
 
     useEffect(() => {
         setWindowWidth(window.innerWidth < 992)
@@ -37,16 +37,23 @@ export const MenuComponent = ({
 
     useEffect(() => {
         const clickOut = (e: MouseEvent) => {
-            if (menuContainer.current && !menuContainer.current.contains(e.target as Node)) {
-                setOpenMenu(false)
-            }
-        }
+            const target = e.target as HTMLElement;
+            const clickEnBotonMenu = target.closest('button') && target.closest('button')?.className.includes('z-70');
 
-        document.addEventListener("mousedown", clickOut)
+            if (
+                menuContainer.current &&
+                !menuContainer.current.contains(target) &&
+                !clickEnBotonMenu
+            ) {
+                setOpenMenu(false);
+            }
+        };
+
+        document.addEventListener("mousedown", clickOut);
         return () => {
-            document.removeEventListener("mousedown", clickOut)
-        }
-    }, [])
+            document.removeEventListener("mousedown", clickOut);
+        };
+    }, [setOpenMenu]);
 
     return (
         <div
@@ -59,8 +66,8 @@ export const MenuComponent = ({
                 <div className='flex flex-col uppercase mt-12 self-start w-full text-white'>
                     <p className='text-[length:var(--h3size)] font-[family-name:var(--fontBold)] mb-4'>Acceso rápido</p>
                     <a onClick={() => setOpenMenu(false)} href='#' className='text-[length:var(--menusize)] mb-3'>Inicio</a>
-                    <a onClick={() => setOpenMenu(false)} href='#Leo' className='text-[length:var(--menusize)] mb-3'>Leo</a>
-                    <a onClick={() => setOpenMenu(false)} href='#Yani' className='text-[length:var(--menusize)] mb-3'>Yani</a>
+                    <a onClick={() => setOpenMenu(false)} href='#Lucas' className='text-[length:var(--menusize)] mb-3'>Lucas</a>
+                    <a onClick={() => setOpenMenu(false)} href='#Yami' className='text-[length:var(--menusize)] mb-3'>Yami</a>
                     <a onClick={() => setOpenMenu(false)} href='#containerCalina' className='text-[length:var(--menusize)] mb-3'>Salón</a>
                     <a onClick={() => setOpenMenu(false)} href={windowWidth ? '#itinerary' : '#containerCalina'} className='text-[length:var(--menusize)] mb-3'>Itinerario</a>
                     <a onClick={() => setOpenMenu(false)} href='#dresscode' className='text-[length:var(--menusize)] mb-3'>Código de vestimenta</a>

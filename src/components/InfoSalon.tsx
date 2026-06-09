@@ -20,11 +20,12 @@ export const InfoSalon = ({
     handleBackInfo
 }: InfoProps) => {
 
-    const urlMaps = "https://maps.app.goo.gl/UudM3Bi5m6jQk3nW8"
-    const urlIframe = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3411.4556295631846!2d-64.25989278860048!3d-31.235807887438405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432836e4d2fcdbf%3A0x309c9f5a1dd5927f!2sRinc%C3%B3n%20Calina!5e0!3m2!1ses!2ses!4v1772183044697!5m2!1ses!2ses"
+    const urlMaps = "https://www.google.com/maps"
+    const urlIframe = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194347.4782735558!2d-3.8443363212976576!3d40.438098609113865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid!5e0!3m2!1ses!2ses!4v1781020940596!5m2!1ses!2ses"
 
     const [advance, setAdvance] = useState<number>(0)
     const [guests, setGuests] = useState<guestsObj[]>([])
+    const [confirmated, setConfirmated] = useState<boolean>(false)
 
     useEffect(() => {
         const guests = data
@@ -84,10 +85,10 @@ export const InfoSalon = ({
                             </div>
                             <div className='mt-[5vh]'>
                                 <h2 className='text-[#ffc2d0] text-[length:var(--h2size)] uppercase font-bold'>
-                                    Como llegar al salon
+                                    Como llegar
                                 </h2>
                                 <p className='text-[#fff9cb] text-[length:var(--h3size)] leading-[1.2] uppercase font-bold'>
-                                    Dirección: Ruta E-53 km 15, jurisdicción Unquillo
+                                    Dirección: Calle de la Finca, Madrid
                                 </p>
                                 <a
                                     href={urlMaps} target='_blank'
@@ -117,8 +118,6 @@ export const InfoSalon = ({
                             <div className='text-white text-[length:var(--h5size)] leading-[1.2] overflow-auto h-full pe-1 border-y border-[#3a3a3a] mb-4'>
                                 {
                                     guests?.map(g => {
-                                        const isLast = guests.length - 1 === g.id
-
                                         return (
                                             <div key={g.id} className='flex justify-between mx-1 my-3'>
                                                 <p className='self-center'>{g.name} {g.lastname}</p>
@@ -135,9 +134,20 @@ export const InfoSalon = ({
                             </div>
                             <button
                                 className="w-full py-3 bg-[#960696] text-white font-bold rounded-lg uppercase hover:bg-gray-200 transition-colors"
-                                onClick={() => sendChanges(guests)}
+                                onClick={() => {
+                                    setConfirmated(prev => !prev)
+                                    setTimeout(() => {
+                                        setGuests(status =>
+                                            status.map(p => {
+                                                return { ...p, transfer: false }
+                                            }))
+                                        setConfirmated(prev => !prev)
+
+                                    }, 3000)
+                                }
+                                }
                             >
-                                Enviar respuesta
+                                {confirmated ? "Respuesta enviada" : "Enviar respuesta"}
                             </button>
                         </div>
                     </div>

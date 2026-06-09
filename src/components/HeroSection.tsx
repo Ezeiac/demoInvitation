@@ -32,7 +32,7 @@ export const HeroSection = ({ id }: HeroProps) => {
                             className="w-[60vw] max-w-[700px] block mx-auto"
                         />
                         <h3 className='uppercase absolute z-2 text-center font-bold w-full top-[110%]'>
-                            Disponible<br />el 9 de enero<br />de 2027
+                            Disponible<br />el 1 de enero<br />de 2001
                         </h3>
                     </div>
                 </div>

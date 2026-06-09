@@ -121,7 +121,7 @@ export const useInvitationAnimations = ({
             });
 
             leoTl.set('#containerTextOrg', { backdropFilter: "blur(15px)" });
-            leoTl.set("#videoLeo canvas", {
+            leoTl.set("#videoLucas canvas", {
                 WebkitMaskImage: "radial-gradient(circle at 105vw 50vh, rgb(0, 0, 0) 100vw, rgb(0, 0, 0) 150vw)",
                 maskImage: "radial-gradient(circle at 105vw 50vh, rgb(0, 0, 0) 100vw, rgb(0, 0, 0) 150vw)",
             })
@@ -159,17 +159,17 @@ export const useInvitationAnimations = ({
                     ease: "power1.inOut",
                 }, "transicionVideo+=1.5")
 
-                .to('#videoLeo', { autoAlpha: 1, duration: 0.5 }, 'transicionVideo+=2.5')
-                .addLabel("LeoAppear")
+                .to('#videoLucas', { autoAlpha: 1, duration: 0.5 }, 'transicionVideo+=2.5')
+                .addLabel("LucasAppear")
                 .to(v1Progress.current, {
                     t: 2, duration: 8, ease: "none",
                 }, 'transicionVideo')
-                .to("#videoLeo canvas", {
+                .to("#videoLucas canvas", {
                     WebkitMaskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
                     maskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
                     duration: 4
-                }, "LeoAppear")
-                .to('#videoLeo', { autoAlpha: 0, duration: 3.5 }, "LeoAppear")
+                }, "LucasAppear")
+                .to('#videoLucas', { autoAlpha: 0, duration: 3.5 }, "LucasAppear")
 
             const yaniTl = gsap.timeline({
                 scrollTrigger: {
@@ -183,33 +183,33 @@ export const useInvitationAnimations = ({
                 }
             });
 
-            yaniTl.set("#videoYani canvas", {
+            yaniTl.set("#videoYami canvas", {
                 WebkitMaskImage: "radial-gradient(circle at 105vw 50vh, rgb(0, 0, 0) 100vw, rgb(0, 0, 0) 150vw)",
                 maskImage: "radial-gradient(circle at 105vw 50vh, rgb(0, 0, 0) 100vw, rgb(0, 0, 0) 150vw)",
             })
 
             yaniTl
-                .to('#videoYani', { autoAlpha: 1, duration: 0.5 })
+                .to('#videoYami', { autoAlpha: 1, duration: 0.5 })
                 .addLabel("yaniAppear")
                 .to(v2Progress.current, {
                     t: 3, duration: 8, ease: "none",
                 }, '-=0.75')
             if (window.innerWidth < 992) {
-                yaniTl.to("#videoYani canvas", {
+                yaniTl.to("#videoYami canvas", {
                     WebkitMaskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
                     maskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
                     duration: 4
                 }, "yaniAppear+=2.5")
             } else {
 
-                yaniTl.to("#videoYani canvas", {
+                yaniTl.to("#videoYami canvas", {
                     WebkitMaskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
                     maskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
                     duration: 4
                 }, "yaniAppear+=2.5")
             }
-            yaniTl.to('#videoYani', { autoAlpha: 0, duration: 3 }, "yaniAppear+=2.5")
-                .to('#Yani', { autoAlpha: 0, duration: 1 }, "yaniAppear+=5.5")
+            yaniTl.to('#videoYami', { autoAlpha: 0, duration: 3 }, "yaniAppear+=2.5")
+                .to('#Yami', { autoAlpha: 0, duration: 1 }, "yaniAppear+=5.5")
 
 
             const catalinaTl = gsap.timeline({

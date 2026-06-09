@@ -18,17 +18,19 @@ import Image from "next/image"
 
 export const Countdown = () => {
 
-    let itsToday: Date = new Date("2027-01-09T19:00:00")
+    let today = new Date()
 
     const [isMounted, setIsMounted] = useState(false)
     const [timeLeft, setTimeLeft] = useState<number>(0)
+
+
 
     useEffect(() => {
 
         setIsMounted(true)
 
         const time = setInterval(() => {
-            setTimeLeft(+itsToday - Date.now())
+            setTimeLeft(today.setDate(today.getDate() + 2) - Date.now())
         }, 1000);
 
         return () => clearInterval(time)
@@ -134,7 +136,7 @@ export const Countdown = () => {
                             </p>
                         </div>
                         <div className="flex justify-between absolute top-[130%] left-0 w-full">
-                            <a href="https://calendar.app.google/YWCwpzWNMJrucNB1A" target="_blank" className="flex items-center">
+                            <a href="#" target="_blank" className="flex items-center">
                                 <span className="me-1 text-white lg:text-(length:--h5size)">Agendar</span>
                                 <Image
                                     src={googleLogo}
@@ -142,7 +144,7 @@ export const Countdown = () => {
                                     className="h-6 w-auto"
                                 />
                             </a>
-                            <a href="/appointment/iosAppointment.ics" download="iosAppointment" className="flex items-center">
+                            <a href="#" className="flex items-center">
                                 <span className="me-1 text-white lg:text-(length:--h5size)">Agendar</span>
                                 <Image
                                     src={appleLogo}

@@ -73,7 +73,7 @@ export const Gifts = ({
                     <div id='giftsTextInner'>
                         <h2 className='text-(length:--h1size)'>Regalos</h2>
                         <p className='w-full mt-6 text-(length:--h3size)'>
-                            Invitado 100%
+                            Vuestra presencia es nuestro mejor regalo, pero si queréis ayudarnos con nuestra luna de miel, cualquier detalle será bienvenido. Podéis hacerlo a través del siguiente número de cuenta: [IBAN].
                         </p>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ export const Gifts = ({
                     <div id='giftsTextInner'>
                         <h2 className='text-(length:--h1size)'>Tarjetas</h2>
                         <p className='w-full mt-6 text-(length:--h3size)'>
-                           Invitado 0%
+                            Invitado 0%
                         </p>
                     </div>
                 </div>

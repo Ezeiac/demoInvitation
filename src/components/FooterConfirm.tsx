@@ -2,7 +2,6 @@
 import '@/src/styles/invitation.css'
 import { useEffect, useState } from 'react';
 import { AnswerComponent } from './AnswerComponent';
-import { createBrowserSupabaseClient } from '@/app/lib/supabase/client';
 import { VideoProps } from '@/src/components/Invitation';
 import { guestsObj } from '@/app/page'
 import { sendChanges } from '../helpers/sendAnswer';
@@ -15,6 +14,7 @@ export const FooterConfirm = ({
     const [dataGuest, setDataGuest] = useState<guestsObj[]>([])
     const [discount, setDiscount] = useState<number>(0)
     const [price, setPrice] = useState<string | null>(null)
+    const [confirmated, setConfirmated] = useState<boolean>(false)
 
     const priceTarj = 160000
 
@@ -61,9 +61,20 @@ export const FooterConfirm = ({
 
                     <button
                         className="w-full py-3 bg-[#960696] text-white font-bold rounded-lg uppercase hover:bg-gray-200 transition-colors"
-                        onClick={() => sendChanges(dataGuest)}
+                        onClick={() => {
+                            setConfirmated(prev => !prev)
+                            setTimeout(() => {
+                                setDataGuest(status =>
+                                    status.map(p => {
+                                        return { ...p, transfer: false }
+                                    }))
+                                setConfirmated(prev => !prev)
+
+                            }, 3000)
+                        }
+                        }
                     >
-                        Enviar respuesta
+                        {confirmated ? "Respuesta enviada" : "Enviar respuesta"}
                     </button>
                 </div>
             </div>

@@ -7,20 +7,7 @@ interface Props {
 
 }
 
-export const TextLayer = ({ id, data }: Props) => {
-
-    const [subText, setSubText] = useState<ObjText>({ sub: "", text: "" })
-
-    useEffect(() => {
-        if (!data) return
-
-        if (id === "Yani" && data.yani) {
-            setSubText(data.yani)
-        } else if (id === "Leo" && data.leo) {
-            setSubText(data.leo)
-        }
-
-    }, [data])
+export const TextLayer = ({ id }: Props) => {
 
     return (
         <div
@@ -29,10 +16,10 @@ export const TextLayer = ({ id, data }: Props) => {
         >
             <div className="drop-shadow-2xl px-8">
                 <h4 className="text-blue-400 tracking-[0.4em] text-(length:--h3size)">
-                    {subText.sub ? subText.sub : id === "Yani" ? "La novia" : "El novio"}
+                    {id === "Yami" ? "La novia" : "El novio"}
                 </h4>
                 <h2 className="font-black italic uppercase leading-none text-[length:clamp(10lvh,7vw,80px)]">{id}</h2>
-                <p className="text-gray-200 font-light leading-relaxed text-(length:--h4size)">{subText.text ? subText.text : id === "Yani" ? "El carisma en persona. Siempre disponible para lo que necesites." : "Un loco lindo que siempre se prende a todas."}</p>
+                <p className="text-gray-200 font-light leading-relaxed text-(length:--h4size)">{id === "Yami" ? "Puro carisma. Siempre dispuesto a echar una mano en lo que haga falta." : "Un tío majísimo que siempre se apunta a todas."}</p>
             </div>
         </div>
     );

@@ -14,9 +14,6 @@ export interface ArrayElements {
   sleep: boolean;
   church: boolean;
   guests: guestsObj[];
-  comments: userCommentsType[];
-  yani: ObjText;
-  leo: ObjText;
   payment_coverage: number;
 }
 
@@ -30,19 +27,8 @@ export type guestsObj = {
   transfer: boolean;
 }
 
-export interface userCommentsType {
-  approbed: boolean,
-  comment: string,
-  created_at?: Date,
-  id: number,
-  public: boolean,
-  slug: string,
-  user: string,
-}
-
 export type dataInv = {
   data: ArrayElements,
-  commentsData: userCommentsType[],
   isDesktop?: boolean | null,
 }
 
@@ -51,8 +37,7 @@ if (typeof window !== "undefined") {
 }
 
 export default function Home({
-  data,
-  commentsData
+  data
 }: dataInv) {
 
   const [isSiteReady, setIsSiteReady] = useState(false)
@@ -110,7 +95,6 @@ export default function Home({
       </div>
       <Invitation
         data={data}
-        commentsData={commentsData}
         isDesktop={isDesktop}
       />
     </>

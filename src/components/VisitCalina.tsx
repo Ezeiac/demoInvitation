@@ -60,7 +60,7 @@ export const VisitCalina = ({
                             setOpenMenu(false);
                         }}
                     >
-                        Descubre Calina
+                        Descubre la finca
                     </button>
                     <Itinerary
                         data={data}
