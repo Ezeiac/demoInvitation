@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --backgroundButtons: #ffffff1a;
+  --foreground: #171717;
+  --ycolor: #FF01AA;
+  --lcolor: #000DFF;
+  --h1size: clamp(5lvh, 7vw, 80px);
+  --h2size: clamp(3.8lvh, 5.5vw, 60px);
+  --h3size: clamp(3.2lvh, 4.5vw, 40px);
+  --h4size: clamp(2.8lvh, 4vw, 32px);
+  --h5size: clamp(2lvh, 3vw, 24px);
+  --menusize: clamp(20px, 5vw, 32px);
+  --psize: 16px;
+  --wsizeM: min(19vw);
+  --wsizeL: min(22vw);
+  --fontNormal: "fontNormal";
+  --fontBold: "fontBold";
+  --fontSemiBold: "fontSemiBold";
+  --textDesc: "textDesc";
+  --cursiveDress: "cursiveDress";
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --colorbuttons: var(--backgroundButtons)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111117;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: 'fontNormal';
+  src: url('@/src/assets/fonts/normal.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'fontBold';
+  src: url('@/src/assets/fonts/bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'fontSemiBold';
+  src: url('@/src/assets/fonts/semiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'textDesc';
+  src: url('@/src/assets/fonts/textDesc.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'cursiveDress';
+  src: url('@/src/assets/fonts/cursiveDress.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--background);
+  -webkit-overflow-scrolling: auto;
+  background-color: var(--background);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+h2 {
+  letter-spacing: 0;
+}
+
+h3,
+h4,
+p {
+  letter-spacing: -.04em;
+}

@@ -1,0 +1,286 @@
+#heroMask {
+    background: #ffffff;
+    -webkit-mask-image: url('../assets/images/hero/textHero.svg');
+    mask-image: url('../assets/images/hero/textHero.svg');
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    -webkit-mask-position: 50% 50%;
+    mask-size: clamp(4500vh, 1500%, 0vh);
+    transform-origin: center 50%;
+    z-index: 30;
+}
+
+#dateLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100lvh;
+    transform-origin: 50% 50%;
+    z-index: 20;
+    -webkit-mask-image: radial-gradient(circle at bottom center,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 30%);
+    mask-image: radial-gradient(circle at bottom center,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 30%);
+}
+
+#dateLogo h3,
+#dateLogo h4 {
+    font-family: 'fontBold';
+    background-image: radial-gradient(circle at 50% 200vh, rgb(255, 210, 123) 0%, rgb(223, 58, 147) 15%, rgb(92, 22, 99) 30%, rgba(32, 31, 66, 0) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#dateLogo h3 {
+    font-style: normal;
+    font-size: var(--h1size);
+    line-height: 86%;
+}
+
+#dateLogo h4 {
+    font-style: normal;
+    font-size: var(--h3size);
+    line-height: 86%;
+}
+
+#priceData h4 {
+    font-family: 'fontBold';
+    background-image: radial-gradient(circle at 50% 200vh, rgb(255, 210, 123) 0%, rgb(223, 58, 147) 15%, rgb(92, 22, 99) 30%, rgba(32, 31, 66, 0) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+    font-size: var(--h3size);
+    line-height: 86%;
+}
+
+
+#priceData p {
+    font-family: 'fontBold';
+    background-image: radial-gradient(circle at 50% 200vh, rgb(255, 210, 123) 0%, rgb(223, 58, 147) 15%, rgb(92, 22, 99) 30%, rgba(32, 31, 66, 0) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: normal;
+    font-size: var(--h4size);
+    line-height: 86%;
+}
+
+#textOrg {
+    transform: translate3d(0px, 0px, 0px) scale(0.8541, 0.8541);
+    mask-image: radial-gradient(at 20% -120vh, rgb(0, 0, 0) 0vh, rgba(0, 0, 0, 0) 50vh);
+    -webkit-mask-image: radial-gradient(at 20% -120vh, rgb(0, 0, 0) 0vh, rgba(0, 0, 0, 0) 50vh);
+    opacity: 1;
+}
+
+#giftsText {
+    transform: translate3d(0px, 0px, 0px) scale(0.8541, 0.8541);
+    mask-image: radial-gradient(at 50% 120vh, rgb(0, 0, 0) 0vh, rgba(0, 0, 0, 0) 10vh);
+    -webkit-mask-image: radial-gradient(at 50% 120vh, rgb(0, 0, 0) 0vh, rgba(0, 0, 0, 0) 10vh);
+    opacity: 1;
+}
+
+#textOrgInner,
+#giftsTextInner {
+    background-image: radial-gradient(circle at 50% 200vh,
+            rgb(255, 210, 123) 0%,
+            rgb(223, 58, 147) 15%,
+            rgb(92, 22, 99) 30%,
+            rgba(32, 31, 66, 0) 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#textOrgInner h2,
+#giftsTextInner h2 {
+    font-family: 'fontBold';
+    letter-spacing: -.0125em;
+    line-height: 100%;
+}
+
+#textOrgInner p,
+#giftsTextInner p {
+    font-family: 'fontSemiBold';
+    text-wrap: pretty;
+    letter-spacing: -.03em;
+    line-height: 120%;
+}
+
+#textFinalContainer {
+    transform: translate3d(0px, 0px, 0px) scale(0.8541, 0.8541);
+    opacity: 1;
+}
+
+#textFinal {
+    background-image: radial-gradient(circle at 50% 90vh, rgb(255, 210, 123) 0vh, rgb(223, 58, 147) 50vh, rgb(92, 22, 99) 100vh);
+    -webkit-text-fill-color: transparent;
+}
+
+#textFinal {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#textFinal h3 {
+    line-height: 120%;
+    font-family: 'fontBold';
+    font-style: normal;
+    font-size: var(--h1size);
+}
+
+.nameNovios h2 {
+    font-family: 'textDesc';
+    color: #fff9cb;
+    font-style: normal;
+    line-height: .9;
+    text-transform: uppercase;
+}
+
+.section-text {
+    background: linear-gradient(180deg,
+            transparent 0%,
+            rgba(0, 0, 0, 0.7) 5%,
+            transparent 95%)
+}
+
+.logoCalina {
+    height: var(--wsizeL);
+}
+
+a {
+    font-family: 'fontSemiBold';
+}
+
+.text-layer-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    width: 100%;
+}
+
+#Leo,
+#Yani,
+#containerTextOrg,
+#finalAnimation {
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.imageBg {
+    --mask-size: 0vh;
+    border-radius: 12px;
+    transition: none;
+}
+
+.dressSelector {
+    background-image: url('../assets/images/dress/bgSelector.svg');
+}
+
+.minus {
+    rotate: -90deg;
+    transition: all 0.5s ease;
+}
+
+.minus.active {
+    rotate: 0deg;
+    transition: all 0.5s ease;
+}
+
+#newComment.viewContainer {
+    transform: translateY(-100%);
+    transition: all 1s ease;
+}
+
+.boxExample {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.logo {
+    width: 20%;
+    max-width: 150px;
+    aspect-ratio: 90/235;
+    z-index: 999;
+    -webkit-mask-image: url("../assets/images/logo2.svg");
+    mask-image: url("../assets/images/logo2.svg");
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: relative;
+    background: #232323;
+    animation-name: _2qmne31;
+    animation-duration: 2.15s;
+    animation-timing-function: cubic-bezier(.455, .03, .515, .955);
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+.logo::after {
+    content: "";
+    background: linear-gradient(232deg, #3012b8 20%, #f30bd4 70%);
+    filter: blur(5px);
+    transform: skew(-45deg, 45deg);
+    position: absolute;
+    top: -40%;
+    left: -40%;
+    width: 25%;
+    height: 60%;
+    z-index: -1;
+    animation-name: logoAnimated;
+    animation-duration: 2.15s;
+    animation-timing-function: cubic-bezier(.77, 0, .175, 1);
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes logoAnimated {
+    0% {
+        top: -40%;
+        left: -40%;
+    }
+
+    92% {
+        top: 75%;
+        left: 100%;
+    }
+
+    100% {
+        top: 75%;
+        left: 100%;
+    }
+}
+
+.borderAnimated {
+    background: radial-gradient(circle at 0% 0%,
+            transparent 10%,
+            rgb(255, 210, 123) 40%,
+            rgb(223, 58, 147) 60%,
+            rgb(92, 22, 99) 80%,
+            transparent 90%);
+    background-size: 100% 200%;
+    animation: sweep 5s linear infinite;
+}
+
+@keyframes sweep {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% -100%;
+    }
+
+}
