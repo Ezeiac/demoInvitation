@@ -1,7 +1,6 @@
 import React from 'react'
 import { guestsObj } from '@/app/page'
 import { myAnswer } from '@/src/helpers/useAnsGuest'
-import { BlockList } from 'net'
 
 type statusAnswer = {
     id: number
