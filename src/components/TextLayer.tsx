@@ -19,7 +19,7 @@ export const TextLayer = ({ id }: Props) => {
                     {id === "Yami" ? "La novia" : "El novio"}
                 </h4>
                 <h2 className="font-black italic uppercase leading-none text-[length:clamp(10lvh,7vw,80px)]">{id}</h2>
-                <p className="text-gray-200 font-light leading-relaxed text-(length:--h4size)">{id === "Yami" ? "Puro carisma. Siempre dispuesto a echar una mano en lo que haga falta." : "Un tío majísimo que siempre se apunta a todas."}</p>
+                <p className="text-gray-200 font-light leading-relaxed text-(length:--h4size)">{id === "Yami" ? "Puro carisma. Siempre dispuesta a echar una mano en lo que haga falta." : "Un tío majísimo que siempre se apunta a todas."}</p>
             </div>
         </div>
     );

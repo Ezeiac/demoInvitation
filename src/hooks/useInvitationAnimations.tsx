@@ -198,15 +198,14 @@ export const useInvitationAnimations = ({
                 yaniTl.to("#videoYami canvas", {
                     WebkitMaskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
                     maskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
-                    duration: 4
-                }, "yaniAppear+=2.5")
+                    duration: 2
+                }, "yaniAppear+=3")
             } else {
-
                 yaniTl.to("#videoYami canvas", {
                     WebkitMaskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
                     maskImage: "radial-gradient(circle at 95vw 0vh, rgb(0, 0, 0) 30vw, rgba(0, 0, 0, 0.15) 60vw)",
-                    duration: 4
-                }, "yaniAppear+=2.5")
+                    duration: 2
+                }, "yaniAppear+=3")
             }
             yaniTl.to('#videoYami', { autoAlpha: 0, duration: 3 }, "yaniAppear+=2.5")
                 .to('#Yami', { autoAlpha: 0, duration: 1 }, "yaniAppear+=5.5")
@@ -278,21 +277,6 @@ export const useInvitationAnimations = ({
             .to("#header", { opacity: 1, duration: 0.3 })
 
         infoSalonAnimation.current = animationSalon;
-
-        // const animationComments = gsap.timeline({ paused: true });
-
-        // animationComments.set("#infoSalon", { x: "90%", autoAlpha: 0 })
-
-        // animationComments
-        //     .to("#lateralMaps", { zIndex: 80 })
-        //     .to("#lateralMaps", { autoAlpha: 1, duration: 0.3 })
-        //     .to("#infoSalon, #photoSalon", { autoAlpha: 1, duration: 0.3 }, "<")
-        //     .to("#infoSalon", { x: 0, duration: 0.3 }, "<")
-        //     .to("#photoSalon", { x: "-90%", duration: 0.3 }, "<")
-        //     .to("#mapsSalon, #photoSalon", { rotateZ: -4, duration: 0.3 }, "<")
-        //     .to("#header", { opacity: 1, duration: 0.3 })
-
-        // commentsAnimation.current = animationComments;
 
         const animationCross = gsap.timeline({ paused: true });
 

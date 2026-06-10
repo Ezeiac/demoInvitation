@@ -25,8 +25,6 @@ export const FooterConfirm = ({
         }
     }, [data])
 
-    console.log(data)
-
     useEffect(() => {
         const priceSet = new Intl.NumberFormat('es-ES').format(priceTarj - priceTarj * (discount || 0))
         setPrice(priceSet)
